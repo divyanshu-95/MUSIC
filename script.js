@@ -2,11 +2,12 @@ var thumbnail=document.querySelector('#thumbnail');
 var song=document.querySelector('#song');
 var songTitle=document.querySelector('.song-title');
 let pPause=document.querySelector('#play-pause')
-songIndex=0;
+let songIndex=0;
 let songs=['music/BOLNA.mp3','music/HEER.mp3','music/TERAHONE.mp3']
 let thumbnails=['images/1.jfif','images/2.jfif','images/3.png']
 let songtitles=['BOLNA','HEER','TERAHONE']
 let songLen=songs.length-1;
+console.log(songLen);
 let playing=true;
 function playPause(){
     if(playing){
@@ -23,16 +24,20 @@ function playPause(){
         playing=true;
     }
 }
-song.addEventListener('even',function(){
-    nextSong();
-})
+// song.addEventListener('even',function(){
+//     nextSong();
+// })
 function nextSong(){
     songIndex++;
+    console.log(songIndex);
     if(songIndex>songLen){
         songIndex=0;//all song over first play
         song.play()
+        // song.src=songs[songIndex];
     }
+    console.log(songs[songIndex]);
     song.src=songs[songIndex];
+    
     thumbnail.src=thumbnails[songIndex];
     var n1 = songtitles[songIndex];
     songTitle.innerHTML= n1;
