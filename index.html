@@ -15,6 +15,7 @@
         background-color: black;
       }
       .container{
+
         position: absolute;
         height: 300pt;
         width: 250pt;
@@ -49,7 +50,7 @@
         z-index: 4;
         color: black;
         font-size: 18px;
-        bottom: 18%;
+        bottom: 8%;
         left: 28%;
       }
       #play-pause{
@@ -77,6 +78,7 @@
       #next-song{right:10%;}
       #previous-song{right:10%;
                     bottom:21%;}
+
     </style>
 </head>
 <body >
@@ -88,21 +90,16 @@
         </div>
         </div>
       </nav><br>
-        <audio src="music/BOLDO.mp3" id="song"></audio>
+        <audio controls src="music/BOLDO.mp3" id="song"  style="margin-top: 400px; margin-left: 700px;"></audio>
         <div class="container">
           <div class="box"></div>
           <img src="images/3.png" id="thumbnail">
-          <img src="icon/play.png" onclick="playPause()" id="play-pause">
-          <img src="icon/next.png" onclick="nextSong()" id="next-song" class="ui">
-          <article id="time">
-            <span id="cur">00.00</span>
-            <input type="range" name="" id="range" value="100">
-            <span id="total">00.00</span>
-          </article>
-          <img src="icon/previous.jfif" onclick="previousSong()" id="previous-song" class="iu">
+          <img src="icon/play.png" onclick="playPause()" id="play-pause" style="margin-bottom: 39px; margin-left: -27px;">
+          <img src="icon/next.png" onclick="nextSong()" id="next-song" class="ui" style="margin-bottom:64px; margin-right: -30px;">
+          
+          <img src="icon/previous.jfif" onclick="previousSong()" id="previous-song" class="iu" style="margin-bottom: 20px;"><br><br><br>
           <div class="song-title" style="color: red;">BOLDO NA ZARA</div>
         </div>
-        
-        <script src="script.js"></script>
+        <script src="script.js"></script> 
 </body>
 </html>
