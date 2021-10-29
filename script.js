@@ -31,9 +31,10 @@ function nextSong(){
     songIndex++;
     console.log(songIndex);
     if(songIndex>songLen){
-        songIndex=0;//all song over first play
-        song.play()
+        // songIndex=0;//all song over first play
+        // song.play()
         // song.src=songs[songIndex];
+        // document.innerHTML.ui='none';
     }
     console.log(songs[songIndex]);
     song.src=songs[songIndex];
@@ -47,8 +48,9 @@ function nextSong(){
 function previousSong(){
     songIndex--;
     if(songIndex<0){
-        songIndex=songLen;
-        song.play()
+        // songIndex=songLen;
+        // song.play()
+        // document.innerHTML.iu='none';
     }
     song.src=songs[songIndex];
     thumbnail.src=thumbnails[songIndex];
